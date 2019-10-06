@@ -1,6 +1,6 @@
 # daxter1987/laravel-env
 
-By installing this composer package into your laravel application, this enables the ``php artisan dax:install`` command, which creates a docker-compose.yml and a daxenv.sh file into your laravel root directory. The you can run ``docker compose up -d`` and you have a laravel environment with a database.
+By installing this composer package into your laravel application, this enables the ``php artisan dax:install`` command, which creates a docker-compose.yml and a daxenv.sh file into your laravel root directory. Then you can run ``docker compose up -d`` and you have a laravel environment with a database.
 
 ## Requirements
 
