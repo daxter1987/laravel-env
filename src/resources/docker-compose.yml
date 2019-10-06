@@ -7,7 +7,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./orca-api:/var/www/html
+      - .:/var/www/html
 
   db:
     image: mysql:5.7
