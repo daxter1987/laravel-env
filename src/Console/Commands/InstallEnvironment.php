@@ -39,7 +39,7 @@ class InstallEnvironment extends Command
     {
         echo "Creating environent\n";
 
-        $docker_compose_file_content = file_get_contents('vendor/daxter1987/laravelEnv/src/resources/docker-compose.yml');
+        $docker_compose_file_content = file_get_contents('vendor/daxter1987/laravel-env/src/resources/docker-compose.yml');
 
         $unique_name = uniqid();
 
@@ -49,7 +49,7 @@ class InstallEnvironment extends Command
         $handle = fopen("docker-compose.yml", 'w') or die('Cannot open file: docker-compose.yml');
         fwrite($handle, $docker_compose_file);
 
-        $bash_content = file_get_contents('vendor/daxter1987/laravelEnv/src/resources/daxenv.sh');
+        $bash_content = file_get_contents('vendor/daxter1987/laravel-env/src/resources/daxenv.sh');
 
         $bash_content_file = str_replace("CONTAINER_NAME", $unique_name, $bash_content);
 
