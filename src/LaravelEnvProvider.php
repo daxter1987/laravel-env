@@ -8,7 +8,7 @@ class LaravelEnvProvider extends ServiceProvider {
     public function boot()
     {
         $this->commands([
-            Commands\Create::class,
+            Commands\InstallEnvironment::class,
         ]);
     }
 
