@@ -1,0 +1,23 @@
+{
+    "name": "daxter1987/laravelEnv",
+    "description": "Environment for laravel applications with mysql",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "daxterbels",
+            "email": "daxter1987@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "daxter1987\\LaravelEnv\\LaravelEnvProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "daxter1987\\LaravelEnv\\": "src/"
+        }
+    }
+}
