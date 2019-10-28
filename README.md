@@ -90,3 +90,35 @@ To ssh into the laravel container run ``docker container ls`` to get the name of
 ```
 docker exec -it CONTAINER_NAME ssh
 ```
+
+## xdebug and PHPStorm
+
+### Setup
+
+The container comes with xdebug installed (if you run phpinfo() you would see the configuration). To use it, set up PHPStorm:
+
+1. Go to Languages and Frameworks > PHP > Servers and set
+    - Name: Name of project
+    - Host: localhost
+    - Port: 8080
+    - Debugger Xdebug
+    - Use path mappings = true
+    - Set Absolute path on server /var/www/html
+   
+1. Go to "Add Configurations"
+   - Click +
+   - Select PHP remote Debug template
+       - Name: Name of project
+       - Server: previously created server
+       - IDE key: PHPSTORM
+   - Click Apply
+   
+### Run 
+- Click on the Bug Icon
+- Send a GET request with 
+
+```
+?XDEBUG_SESSION_START=PHPSTORM
+```
+
+- Send a post request with XDEBUG_SESSION_START=PHPSTORM as a param
